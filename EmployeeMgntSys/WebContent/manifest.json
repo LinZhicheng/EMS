@@ -1,0 +1,80 @@
+{
+	"sap.ui5": 
+	{
+		"_version": "1.1.0",
+		"rootView": "ems.employeemgntsys.App",
+		"dependencies": 
+		{
+			"minUI5Version": "1.30",
+			"libs": 
+			{
+				"sap.m": 
+				{
+					
+				}
+			}
+		},
+
+		"routing": 
+		{
+			"config": 
+			{
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ems.employeemgntsys",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+
+			"routes": 
+			[
+				{
+					"pattern": "",
+					"name": "list",
+					"target": "list"
+				},
+
+				{
+					"pattern": "profile/{id}",
+					"name": "profile",
+					"target": "profile"
+				},
+
+				{
+					"pattern": "add",
+					"name": "add",
+					"target": "add"
+				},
+
+				{
+					"pattern": "edit/{id}",
+					"name": "edit",
+					"target": "edit"
+				}
+			],
+
+			"targets": 
+			{
+				"list": 
+				{
+					"viewName": "employeeList"
+				},
+
+				"profile": 
+				{
+					"viewName": "employeeProfile"
+				},
+
+				"add": 
+				{
+					"viewName": "employeeAdd"
+				},
+
+				"edit": 
+				{
+					"viewName": "employeeEdit"
+				}
+			}
+		}
+	}
+}

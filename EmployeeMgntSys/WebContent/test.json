@@ -1,0 +1,20 @@
+{
+	"value": 
+	[
+		{
+			"EmployeeID": "1",
+			"LastName": "Lin",
+			"FirstName": "David",
+			"Phone": "123456",
+			"Photo": "kajsdnvijbrgjalkjer"
+		},
+
+		{
+			"EmployeeID": "2",
+			"LastName": "Lin",
+			"FirstName": "David",
+			"Phone": "123456",
+			"Photo": "kajsdnvijbrgjalkjer"
+		}
+	]
+}

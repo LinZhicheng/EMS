@@ -1,0 +1,52 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="ems.employeemgntsys.employeeList"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Employee List">
+		<content>
+			<Table title="Employee Mobile" items="{/}" selectionMode="MultiToggle">
+				<columns>
+					<Column>
+						<Label text="Employee ID" />
+					</Column>
+					<Column>
+						<Label text="Photo" />
+					</Column>
+					<Column>
+						<Label text="Last Name" />
+					</Column>
+					<Column>
+						<Label text="First Name" />
+					</Column>
+					<Column>
+						<Label text="Phone" />
+					</Column>
+					<Column>
+						<Label text="Department" />
+					</Column>
+					<Column>
+						<Label text="Position" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onPressProfile">
+						<cells>
+							<Text text="{id}" />
+							<Image height="10rem" width="7rem"
+								src="/EmployeeMgntSys/api/document/download?imageId={photoId}" />
+							<Text text="{lastName}" />
+							<Text text="{firstName}" />
+							<Text text="{phoneNumber}" />
+							<Text text="{department}" />
+							<Text text="{position}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<Bar>
+				<contentRight>
+					<Button text="Add" press="onPressAdd" />
+				</contentRight>
+			</Bar>
+		</content>
+	</Page>
+</core:View>

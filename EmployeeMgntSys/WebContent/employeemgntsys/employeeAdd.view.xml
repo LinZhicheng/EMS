@@ -1,0 +1,31 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:f="sap.ui.layout.form"
+	controllerName="ems.employeemgntsys.employeeAdd" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Add Employee">
+		<content>
+			<f:SimpleForm title="Employee Profile">
+				<f:content>
+					<Label text="Last Name" />
+					<Input name="lastName" value="{/lastName}" />
+					<Label text="First Name" />
+					<Input name="firstName" value="{/firstName}" />
+					<Label text="Phone" />
+					<Input name="phoneNumber" value="{/phoneNumber}" />
+				</f:content>
+			</f:SimpleForm>
+			<Bar>
+				<contentMiddle>
+					<u:FileUploader id="fileUploader" name="file"
+						uploadUrl="/EmployeeMgntSys/api/document/upload" width="300px"
+						uploadComplete="onUploadCompleted" />
+				</contentMiddle>
+			</Bar>
+			<Bar>
+				<contentMiddle>
+					<Button text="Save" press="onPressSave" />
+					<Button text="Cancel" press="onPressCancel" />
+				</contentMiddle>
+			</Bar>
+		</content>
+	</Page>
+</core:View>

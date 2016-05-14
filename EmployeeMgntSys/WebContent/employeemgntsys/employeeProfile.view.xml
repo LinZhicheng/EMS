@@ -1,0 +1,33 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="ems.employeemgntsys.employeeProfile"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Employee">
+		<content>
+			<f:SimpleForm title="Employee Profile">
+				<f:content>
+					<Label text="Image" />
+					<Image height="10rem" width="7rem"
+						src="/EmployeeMgntSys/api/document/download?imageId={/photoId}" />
+					<Label text="Employee ID" />
+					<Text text="{/id}" />
+					<Label text="Last Name" />
+					<Text text="{/lastName}" />
+					<Label text="First Name" />
+					<Text text="{/firstName}" />
+					<Label text="Phone" />
+					<Text text="{/phoneNumber}" />
+					<Label text="Department" />
+					<Text text="{/department}" />
+					<Label text="Position" />
+					<Text text="{/position}" />
+				</f:content>
+			</f:SimpleForm>
+			<Bar>
+				<contentMiddle>
+					<Button text="Edit" press="onPressEdit" />
+					<Button text="Back" press="onPressBack" />
+				</contentMiddle>
+			</Bar>
+		</content>
+	</Page>
+</core:View>
